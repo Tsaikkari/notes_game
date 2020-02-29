@@ -1,0 +1,211 @@
+ body{
+        color: rgba(0, 0, 0, .87);
+ }
+ /**
+    * Pure CSS3 Piano by Taufik Nurrohman
+    * On: 1 December 2011
+    * URL: https://hompimpaalaihumgambreng.blogspot.com/
+    * Note: This experiment is under the God Almighty License.
+    * Please do not replace or remove the attribution above if you want to save/modify this project legally.
+    * Good luck!
+    */
+
+    .keys {
+    display: block;
+    width: 100%;
+    height: 270px;
+    max-width: 900px;
+    position: relative;
+    margin: 20px auto  auto 10px;
+    }
+
+    .key {
+    position: relative;
+    border: solid #000 1px;
+    border-radius: .4rem;
+    transition: all .07s ease;
+    display: block;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px 0 #000;
+    z-index: 2;
+    color: white;
+    }
+
+    .key:not(.sharp) {
+    float: left;
+    width: 14%;
+    height: 100%;
+    background: ivory;
+    }
+
+    .key.sharp {
+    position: absolute;
+    width: 10.3%;
+    height: 61%;
+    background: #2e242c;
+    border-radius: 0 0 8px 8px;
+    top: 0;
+    z-index: 3;
+    }
+
+    .key.cis {
+    left: 8.5%;
+    }
+
+    .key.dis {
+    left: 23%;
+    }
+
+    .key.fis {
+    left: 50.5%;
+    }
+
+    .key.gis{
+    left: 64.5%;
+    }
+
+    .key.ais {
+    left: 79%;
+    }
+
+    .key-name {
+    font-size: 2.3rem;
+    color: #000;
+    }
+
+    a {
+    text-decoration: none;
+    }
+
+    .key.active {
+    animation: secrets 300ms;
+    background-color: #4897d8;
+    box-shadow: 0 0 20px white;
+    }
+
+    .key.clicked-button {
+    background-color: red;
+    }
+
+    @keyframes secrets {
+    from {
+    opacity: 0.2;
+    background: tint(black, 35%);
+    }
+    }
+
+    @keyframes whites {
+    from {
+    background: tint(black, 35%);
+    color: ivory;
+    text-shadow: 0 0 1rem, 0 0 2rem, 0 0 3rem;
+    }
+    }
+
+    @keyframes blacks {
+    from {
+    background: tint(black, 35%);
+    color: ivory;
+    text-shadow: 0 0 1rem, 0 0 2rem, 0 0 3rem;
+    }
+    }
+
+    /** responsive piano **/
+    @media screen and (max-width: 600px) {
+    .keys{
+       height: 160px;
+    }
+    .key-name {
+       font-size: 1.7rem;
+    }
+    }
+
+
+   #introSection {
+      /* display: none; */
+      /* display: inline; */
+   }
+
+   #learnSection{
+      display: none;
+      /* padding-bottom: 299px; */
+   }
+
+   .notes{
+      position: absolute;
+      width: 100%;
+      height: 300px;
+   }
+   
+   .note-head {
+      width: 18px;
+      height: 18px;
+      background: #ccc;
+      border-radius: 50%;
+      position: relative;
+      -webkit-animation: mymove 1s;
+      -moz-animation: mymove 1s;
+      animation: mymove 1s;
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      display: none;
+   }
+
+   hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 1.6em 0;
+      padding: 0;
+   }
+   .notes-section {
+      height: 200px;
+   }
+   /* hr {
+      margin: 50px;
+      color: white;
+   } */
+
+
+   @keyframes mymove {
+      from {
+         top: var(--t, 0rem);
+         left: var(--l, 2.3rem);
+      }
+
+      to {
+         top: var(--t2, 1.4rem);
+         left: var(--l, 2.3rem);
+         background-color: black;
+      }
+   }
+
+  .moving-clouds {
+     position: absolute;
+     z-index: 1;
+     bottom: 0;
+     left: 0;
+      width: 250.625em;
+      height: 43.75em;
+     /* background: transparent; */
+     -webkit-animation: cloudLoop 80s linear infinite;
+     animation: cloudLoop 80s linear infinite;
+  }
+
+  @keyframes cloudLoop {
+     0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+     }
+
+     100% {
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
+     }
+  }
+
+  #game-info{
+    text-align: center;
+  }
