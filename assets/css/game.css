@@ -112,8 +112,10 @@ hr {
 }
 
 #ledger-line {
-   margin-left: 1.6rem;
-   margin-right: 32.67rem;
+   /*margin-left: 1.6rem;
+   margin-right: 32.67rem;*/
+   margin-left: 4%;
+   margin-right: 89.4%;
 }
 
 .notes-section {

@@ -9,7 +9,7 @@ let keyNoteHeadPositions = [
         initial_position: "0rem",
         final_position: "11rem",
         //left: "2rem"
-        left: "6%"
+        left: "5%"
     },
     {
         key: "d",
@@ -62,11 +62,11 @@ $('#learn-game').on('click', function () {
 }); 
 
 $("#play-game").on("click", function() {
-  $(".home-screen").css("display", "none");
-  $(".learn-screen").css("display", "block");
-  $("#game-info").text('Play the corresponding keyboard key of the note. If the note doesn\'t move, click the same key again.');
-  isPlay = true;
-  getRandomNote();
+    $(".home-screen").css("display", "none");
+    $(".learn-screen").css("display", "block");
+    $("#game-info").text('Play the corresponding keyboard key of the note. If the note doesn\'t move, click the same key again.');
+    isPlay = true;
+    getRandomNote();
 }); 
 
 $('.key-board-key').off('click');
@@ -114,7 +114,7 @@ function showKeyNoteHeads(note){
 }
 
 function playTone(note){
- let audio = new Audio("../assets/sounds/"+ note + ".mp3")
+    let audio = new Audio("../assets/sounds/"+ note + ".mp3")
  audio.play()
 }
 
