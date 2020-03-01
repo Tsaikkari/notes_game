@@ -2,48 +2,48 @@
 //position of keynote-head 
 let isPlay = false;
 let note ;
-let keyHeadNotePositions = [
+let keyNoteHeadPositions = [
     {
         key: "c",
         initial_position: "0rem",
-        final_position: "1.3rem",
-        left: "1.3rem"
+        final_position: "11rem",
+        left: "2rem"
     },
     {
         key: "d",
         initial_position: "0rem",
-        final_position: "2.9rem",
-        left: "3.9rem"
+        final_position: "10.15rem",
+        left: "7.4rem"
     },
     {
         key: "e",
         initial_position: "0rem",
-        final_position: "4.3rem",
-        left: "4.3rem"
+        final_position: "9.4rem",
+        left: "12.5rem"
     },
     {
         key: "f",
         initial_position: "0rem",
-        final_position: "5.3rem",
-        left: "6.3rem"
+        final_position: "8.45rem",
+        left: "17.8rem"
     },
     {
         key: "g",
         initial_position: "0rem",
-        final_position: "7.3rem",
-        left: "8.3rem"
+        final_position: "7.6rem",
+        left: "23rem"
     },
     {
         key: "a",
         initial_position: "0rem",
-        final_position: "8.3rem",
-        left: "9.3rem"
+        final_position: "6.7rem",
+        left: "28.5rem"
     },
     {
         key: "b",
         initial_position: "0rem",
-        final_position: "6.3rem",
-        left: "28.3rem"
+        final_position: "5.9rem",
+        left: "33.5rem"
     },
 ]
 
@@ -71,21 +71,31 @@ $('.key-board-key').on('click', function () {
     if (isPlay && note) {
         pressedKey !== note.key ? playTone("wrong") : playTone(pressedKey);
     } else {
-      hideKeyHeadNotes();
-      showKeyHeadNotes(pressedKey);
-      playTone(pressedKey);
+      hideKeyNoteHeads();
+      showKeyNoteHeads(pressedKey);
+      playTone(pressedKey); 
     }
 }); 
 
-function hideKeyHeadNotes(){
+$('.key-board-key').on('click', function () {
+    if (isPlay && note) {
+    note = generateRandomNote();
+    let getElementNote = document.querySelectorAll('[data-notehead-key=c]')[0];
+    getElementNote.style.display = 'block';
+    getElementNote.style.setProperty("--t", note.initial_position);
+    getElementNote.style.setProperty("--t2", note.final_position);
+    }
+});
+
+function hideKeyNoteHeads(){
     $('.note-head').each(function () {
         $(this).css('display', 'none')
     })
 }
 
-function showKeyHeadNotes(note){
+function showKeyNoteHeads(note){
     let getElementNote = document.querySelectorAll('[data-notehead-key="' + note + '"]')[0];
-    let noteHead = keyHeadNotePositions.find(noteposition =>  noteposition.key === note);
+    let noteHead = keyNoteHeadPositions.find(noteposition =>  noteposition.key === note);
     getElementNote.style.display = 'block';
     getElementNote.style.setProperty('--t', noteHead.initial_position);
     getElementNote.style.setProperty("--t2", noteHead.final_position);
@@ -99,5 +109,5 @@ function playTone(note){
 
 function generateRandomNote(){
     let randomNumber = Math.floor(Math.random() * 7); 
-    return keyHeadNotePositions[randomNumber];
+    return keyNoteHeadPositions[randomNumber];
 }
