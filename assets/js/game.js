@@ -59,11 +59,7 @@ $("#play-game").on("click", function() {
   $(".learn-screen").css("display", "block");
   $("#game-info").text('Play Note');
   isPlay = true;
-  note = generateRandomNote();
-  let getElementNote = document.querySelectorAll('[data-notehead-key=c]')[0];
-  getElementNote.style.display = 'block';
-  getElementNote.style.setProperty("--t", note.initial_position);
-  getElementNote.style.setProperty("--t2", note.final_position);
+  getRandomNote();
 }); 
 
 $('.key-board-key').off('click');
@@ -71,7 +67,7 @@ $('.key-board-key').on('click', function () {
     let pressedKey = $(this).data("note");
     if (isPlay && note) {
         pressedKey !== note.key ? playTone("wrong") : playTone(pressedKey)
-        nextRandomNote();
+        nextRandomNote()
     } else {
       hideKeyNoteHeads();
       showKeyNoteHeads(pressedKey);
@@ -82,14 +78,18 @@ $('.key-board-key').on('click', function () {
 function nextRandomNote() {
     $('.key-board-key').on('click', function () {
         if (isPlay && note) {
-        note = generateRandomNote();
-        let getElementNote = document.querySelectorAll('[data-notehead-key=c]')[0];
-        getElementNote.style.display = 'block';
-        getElementNote.style.setProperty("--t", note.initial_position);
-        getElementNote.style.setProperty("--t2", note.final_position);
+        getRandomNote();
         }
     });
 };
+
+function getRandomNote() {
+    note = generateRandomNote();
+    let getElementNote = document.querySelectorAll('[data-notehead-key=c]')[0];
+    getElementNote.style.display = 'block';
+    getElementNote.style.setProperty("--t", note.initial_position);
+    getElementNote.style.setProperty("--t2", note.final_position); 
+}
 
 function hideKeyNoteHeads(){
     $('.note-head').each(function () {
