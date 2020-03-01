@@ -1,7 +1,8 @@
 // user clicks learn game
 //position of keynote-head 
 let isPlay = false;
-let note ;
+let note;
+
 let keyNoteHeadPositions = [
     {
         key: "c",
@@ -69,7 +70,8 @@ $('.key-board-key').off('click');
 $('.key-board-key').on('click', function () {
     let pressedKey = $(this).data("note");
     if (isPlay && note) {
-        pressedKey !== note.key ? playTone("wrong") : playTone(pressedKey);
+        pressedKey !== note.key ? playTone("wrong") : playTone(pressedKey)
+        nextRandomNote();
     } else {
       hideKeyNoteHeads();
       showKeyNoteHeads(pressedKey);
@@ -77,15 +79,17 @@ $('.key-board-key').on('click', function () {
     }
 }); 
 
-$('.key-board-key').on('click', function () {
-    if (isPlay && note) {
-    note = generateRandomNote();
-    let getElementNote = document.querySelectorAll('[data-notehead-key=c]')[0];
-    getElementNote.style.display = 'block';
-    getElementNote.style.setProperty("--t", note.initial_position);
-    getElementNote.style.setProperty("--t2", note.final_position);
-    }
-});
+function nextRandomNote() {
+    $('.key-board-key').on('click', function () {
+        if (isPlay && note) {
+        note = generateRandomNote();
+        let getElementNote = document.querySelectorAll('[data-notehead-key=c]')[0];
+        getElementNote.style.display = 'block';
+        getElementNote.style.setProperty("--t", note.initial_position);
+        getElementNote.style.setProperty("--t2", note.final_position);
+        }
+    });
+};
 
 function hideKeyNoteHeads(){
     $('.note-head').each(function () {
