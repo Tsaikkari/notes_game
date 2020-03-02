@@ -68,6 +68,12 @@ body{
    color: #000;
 }
 
+.key.active {
+   animation: secrets 300ms;
+   background-color: #4897d8;
+   box-shadow: 0 0 20px white;
+}
+
 /** responsive piano **/
 @media screen and (max-width: 600px) {
    .keys{
@@ -116,8 +122,8 @@ hr {
 #ledger-line {
    /*margin-left: 1.6rem;
    margin-right: 32.67rem;*/
-   margin-left: 4%;
-   margin-right: 89.5%;
+   margin-left: 3.4%;
+   margin-right: 88.7%;
 }
 
 .notes-section {
