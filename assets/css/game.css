@@ -1,3 +1,5 @@
+html, body {width: auto!important; overflow-x: hidden!important}
+
 body{
    color: rgba(0, 0, 0, .87);
 }
@@ -115,7 +117,7 @@ hr {
    /*margin-left: 1.6rem;
    margin-right: 32.67rem;*/
    margin-left: 4%;
-   margin-right: 89.4%;
+   margin-right: 89.5%;
 }
 
 .notes-section {
@@ -125,12 +127,12 @@ hr {
 @keyframes mymove {
  from {
     top: var(--t, 0rem);
-    left: var(--l, 2rem);
+    left: var(--l, 4.5%);
  }
 
  to {
     top: var(--t2, 1.4rem);
-    left: var(--l, 2rem);
+    left: var(--l, 4.5%);
     background-color: yellow;
  }
 }
