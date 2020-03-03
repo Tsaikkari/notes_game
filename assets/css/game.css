@@ -82,9 +82,6 @@ body{
    .key-name {
    font-size: 1.7rem;
    }
-}
-
-@media screen and (max-width: 410px) {
    #ledger-line {
       width: 35px;
    }
