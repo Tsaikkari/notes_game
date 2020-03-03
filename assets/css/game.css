@@ -76,11 +76,17 @@ body{
 
 /** responsive piano **/
 @media screen and (max-width: 600px) {
-   .keys{
+   .keys {
       height: 160px;
    }
    .key-name {
    font-size: 1.7rem;
+   }
+}
+
+@media screen and (max-width: 410px) {
+   #ledger-line {
+      width: 35px;
    }
 }
 
@@ -167,6 +173,6 @@ hr {
    }
 }
 
-#game-info{
+#game-info {
    text-align: center;
 }
