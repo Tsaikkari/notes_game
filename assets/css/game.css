@@ -139,12 +139,12 @@ hr {
 @keyframes mymove {
  from {
     top: var(--t, 0rem);
-    left: var(--l, 4.5%);
+    left: var(--l, 5%);
  }
 
  to {
     top: var(--t2, 1.4rem);
-    left: var(--l, 4.5%);
+    left: var(--l, 5%);
     background-color: yellow;
  }
 }
