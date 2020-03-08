@@ -1,5 +1,4 @@
- 
-<!--
+ <!--
  =========================================================
  * Material Kit - v2.0.6
  =========================================================
@@ -15,7 +14,6 @@
 
   <head>
     <meta charset="utf-8" />
-    <!--<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">-->
     <link rel="treble-clef-icon" href="../assets/img/treble-clef-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -30,9 +28,8 @@
     <link href="../assets/css/material-kit.css?v=2.0.6" rel="stylesheet" />
     <!-- CSS  for piano -->
     <link href="../assets/css/game.css" rel="stylesheet" />
-
   </head>
-
+ 
   <body class="login-page sidebar-collapse">
     <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
       <div class="container">
@@ -74,15 +71,21 @@
             <div class="row text-center">
               <div class="col-md-8 ml-auto mr-auto">
                 <h3>Learn notes with me</h3>
-                <h4>Hit the buttons below to navigate first to LEARN, where you memorize the notes on the staff and their corresponding keyboard keys. Then, test your skills and click the PLAY button! If you find the game hard to play, don't despair: Go back to practicing the notes and you'll make a fast progress by sticking with it for awhile.</h4>
+                <h4>Hit the buttons below to navigate first to LEARN, where you memorize the notes on the staff and their corresponding keyboard keys. Then, test your skills and click on the PLAY button! If you find the game hard to play, don't despair: Go back to practicing the notes and you'll make a fast progress by sticking with it for awhile.</h4>
               </div>
               <div class="col-sm-7 col-md-6 ml-auto mr-auto">
                 <a href="#" class="btn btn-primary btn-lg" id="learn-game">
-                  <i class="fa fa-book"></i> Learn
+                𝄞 &nbsp;Learn
                 </a>
                 <a href="#" class="btn btn-primary btn-lg" id="play-game">
                   🎹 &nbsp;Play
                 </a>
+                <a href="#" class="btn btn-primary btn-lg" id="learn-bass">
+                𝄢 &nbsp;Learn
+              </a>
+              <a href="#" class="btn btn-primary btn-lg" id="play-bass">
+                🎹 &nbsp;Play
+              </a>
               </div>
             </div>
             <br>
@@ -91,33 +94,33 @@
         </div>
         <div class="col-lg-7 col-md-6 ml-auto mr-auto learn-screen" id="learnSection">
           <div class="container">
-            <h5 id="game-info"> Learn treble clef notes by clicking the keyboard keys</h5>
+            <h5 id="game-info"> Learn treble clef notes by clicking on the keyboard keys</h5>
             <div class="keyboard"></div>
             <div class="keys">
-              <button type="button" class="c key key-board-key" data-note="c">
+              <button type="button" class="c key key-board-key" data-note="c" data-bass-note="c0">
                 <span class="key-name">C</span>
               </button>
               <button type="button" class="key sharp cis" data-note="c#"></button>
-              <button type="button" class="d key key-board-key" data-note="d">
+              <button type="button" class="d key key-board-key" data-note="d" data-bass-note="d0">
                 <span class="key-name">D</span>
               </button>
               <button type="button" class="key sharp dis " data-note="d#"></button>
-              <button type="button" class="e key key-board-key" data-note="e">
+              <button type="button" class="e key key-board-key" data-note="e" data-bass-note="e0">
                 <span class="key-name">E</span>
               </button>
-              <button type="button" class="f key key-board-key" data-note="f">
+              <button type="button" class="f key key-board-key" data-note="f" data-bass-note="f0">
                 <span class="key-name">F</span>
               </button>
               <button type="button" class="key sharp fis" data-note="f#"></button>
-              <button type="button" class="g key key-board-key" data-note="g">
+              <button type="button" class="g key key-board-key" data-note="g" data-bass-note="g0">
                 <span class="key-name">G</span>
               </button>
               <button type="button" class="key sharp gis " data-note="g#"></button>
-              <button type="button" class="a key key-board-key" data-note="a">
+              <button type="button" class="a key key-board-key" data-note="a" data-bass-note="a0">
                 <span class="key-name">A</span>
               </button>
               <button type="button" class="key sharp ais " data-note="a#"></button>
-              <button type="button" class="b key key-board-key" data-note="b">
+              <button type="button" class="b key key-board-key" data-note="b" data-bass-note="b0">
                 <span class="key-name">B</span>
               </button>
             </div>
@@ -130,6 +133,14 @@
               <div class="note-head" data-notehead-key="g"></div>
               <div class="note-head" data-notehead-key="a"></div>
               <div class="note-head" data-notehead-key="b"></div>
+              <!-- <div class="note-head random-bass-note" ></div> -->
+              <div class="note-head" data-noteheadbass-key="c0"></div>
+              <div class="note-head" data-noteheadbass-key="d0"></div>
+              <div class="note-head" data-noteheadbass-key="e0"></div>
+              <div class="note-head" data-noteheadbass-key="f0"></div>
+              <div class="note-head" data-noteheadbass-key="g0"></div>
+              <div class="note-head" data-noteheadbass-key="a0"></div>
+              <div class="note-head" data-noteheadbass-key="b0"></div>
               <!-- <div staff</div> -->
               <hr id="line1" />
               <hr id="line2" />
@@ -190,5 +201,6 @@
 
     <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
     <script src="../assets/js/material-kit.js?v=2.0.6" type="text/javascript"></script>
-  </body>
-</html>
+   </body>
+ </html>
+ 
