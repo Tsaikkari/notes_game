@@ -1,5 +1,5 @@
 // user clicks learn game or learn bass
-//position of keynote-head 
+//position of keynote-head and basskeynote-head
 let isPlay = false;
 let note;
 let isBass = false;
@@ -95,6 +95,7 @@ let bassKeyNoteHeadPositions = [
         left: "90%"
     }
 ]
+
 /** treble **/
 $('#learn-game').off('click')
 $('#learn-game').on('click', function () {
@@ -184,10 +185,11 @@ function nextRandomNote() {
             getRandomNote();
         } 
         if (isBass && note) {
-            getBassRandomNote(); // TODO: should display random bass-note
+            getBassRandomNote(); 
         }
     });
 };
+
 /** note heads **/
 function hideKeyNoteHeads(){
     $('.note-head').each(function () {
@@ -218,6 +220,7 @@ function playTone(note){
  audio.play()
 }
 
+/** random-note **/
 function generateRandomNote(){
     let randomNumber = Math.floor(Math.random() * 7); 
     return keyNoteHeadPositions[randomNumber];
