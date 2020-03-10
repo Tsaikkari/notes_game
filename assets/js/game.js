@@ -141,10 +141,8 @@ $('#play-bass').on('click', function () {
     $(".learn-screen").css("display", "block");
     $('#ledger-line').css('display', 'none');
     $("#game-info").text('Play the corresponding keyboard key of the note. If the note doesn\'t move, click the same key again.');
-    isPlay = false;
     isBass = true;
     getBassRandomNote();
-    clickKeyBass();
 })
 
 function clickKeyBass() {
