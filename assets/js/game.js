@@ -95,7 +95,7 @@ let bassKeyNoteHeadPositions = [
         left: "90%"
     }
 ]
-
+    
 /** treble **/
 $('#learn-game').off('click')
 $('#learn-game').on('click', function () {

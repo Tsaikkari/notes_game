@@ -21,7 +21,6 @@ body{
    transition: all .07s ease;
    display: block;
    box-sizing: border-box;
-   box-shadow: 0 4px 4px 0 #000;
    z-index: 2;
    color: white;
 }
@@ -31,6 +30,7 @@ body{
    width: 14%;
    height: 100%;
    background: ivory;
+   box-shadow: 0 4px 4px 0 #000;
 }
 
 .key.sharp {
@@ -41,6 +41,10 @@ body{
    border-radius: 0 0 8px 8px;
    top: 0;
    z-index: 3;
+}
+
+.key:active {
+   box-shadow: 0 1px 1px 0 #000;
 }
 
 .key.cis {
@@ -66,12 +70,6 @@ body{
 .key-name {
    font-size: 2.3rem;
    color: #000;
-}
-
-.key.active {
-   animation: secrets 300ms;
-   background-color: #4897d8;
-   box-shadow: 0 0 20px white;
 }
 
 /** responsive piano **/
