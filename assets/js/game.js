@@ -171,7 +171,7 @@ function getRandomNote() {
 
 function getBassRandomNote() {
     note = generateBassRandomNote();
-    let getBassElementNote = document.querySelectorAll('[data-noteheadbass-key=c0')[0];
+    let getBassElementNote = document.querySelectorAll('[data-noteheadbass-key=c0]')[0];
     getBassElementNote.style.display = 'block';
     getBassElementNote.style.setProperty("--t", note.initial_position);
     getBassElementNote.style.setProperty("--t2", note.final_position); 
